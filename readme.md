@@ -28,8 +28,8 @@ dir(hex): código máquina (hex)   código ensamblador
    8:   00800393                addi    t2,zero,8
    c:   0100006f                jal     zero,1c
   10:   0062a023                sw      t1,0(t0)
-  14:   00428293                add     t0,t0,4
-  18:   00130313                add     t1,t1,1
+  14:   00428293                addi    t0,t0,4
+  18:   00130313                addi    t1,t1,1
   1c:   fe734ae3                blt     t1,t2,10
   20:   0000006f                jal     zero,20
 ~~~
