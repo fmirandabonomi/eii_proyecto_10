@@ -16,7 +16,7 @@ Electrónica II para Ingeniería Electrónica. 2024
 - Con asistencia del material presentado en clase y las referencias bibliográficas, diseñar un datapath multiciclo que permita implementar el conjunto de instrucciones RV32I. Considerar los bloques desarrollados en proyectos anteriores: registro de 32 bit, memoria RAM 256x32 bit, conjunto de registros 32x32 bit de tres puertos y unidad aritmética lógica de 32 bit. Adaptar los bloques según sea necesario.
 - Determinar las operaciones necesarias para la implementación en el datapath diseñado de las operaciones RV32I `lw`, `sw` y las de codigos de operación 19, 51, 99, 103 y 111.
 - Diseñar una unidad de control (máquina de estado finito) capaz de ejecutar las instrucciones mencionadas en el apartado anterior.
-- Realizar la descripción de hardware en VHDL de un procesador conformado por el datapath y control diseñados.
+- Realizar la descripción de hardware en VHDL de un procesador conformado por el datapath y control diseñados. La Figura 1 muestra un diagrama esquemático ilustrativo del diseño final esperado.
 - Evaluar mediante simulación el desempeño del procesador desarrollado utilizando el programa de prueba del Listado 1 (dado en ensamblador y código máquina).
 
 Listado 1: Listado del programa de prueba.
@@ -33,6 +33,10 @@ dir(hex): código máquina (hex)   código ensamblador
   1c:   fe734ae3                blt     t1,t2,10
   20:   0000006f                jal     zero,20
 ~~~
+
+Figura 1: Diagrama esquemático del diseño final esperado
+
+![Diagrama esquemático del diseño final esperado](fig1.png)
 
 ## Entregables
 
