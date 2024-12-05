@@ -1,3 +1,4 @@
 build/*
 resultados/*
 *.patch
+.vscode/settings.json
