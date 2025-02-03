@@ -36,7 +36,7 @@ dir(hex): código máquina (hex)   código ensamblador
 
 Figura 1: Diagrama esquemático del diseño final esperado
 
-![Diagrama esquemático del diseño final esperado](fig1.png)
+![Diagrama esquemático del diseño final esperado](fig1.svg)
 
 ## Entregables
 

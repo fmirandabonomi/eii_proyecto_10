@@ -33,9 +33,9 @@
      inkscape:document-units="mm"
      showgrid="true"
      showguides="false"
-     inkscape:zoom="0.71446409"
-     inkscape:cx="714.52157"
-     inkscape:cy="481.47976"
+     inkscape:zoom="1.0104048"
+     inkscape:cx="315.2202"
+     inkscape:cy="948.13484"
      inkscape:window-width="1920"
      inkscape:window-height="974"
      inkscape:window-x="-11"
@@ -425,7 +425,7 @@
            sodipodi:role="line"
            id="tspan2829"
            x="130.06499"
-           y="26.456694">ram_256x32</tspan></text>
+           y="26.456694">ram_512x32</tspan></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
          d="m 67.999998,12 -1,2"
@@ -444,7 +444,7 @@
            id="tspan2837"
            style="stroke-width:0.352778"
            x="24.999998"
-           y="11">8</tspan></text>
+           y="11">9</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
@@ -487,21 +487,6 @@
            style="stroke-width:0.352778"
            x="24.999996"
            y="25">32</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="m 24.999996,19 -1,2"
-         id="path2859" />
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="24.999994"
-         y="18"
-         id="text2863"><tspan
-           sodipodi:role="line"
-           id="tspan2861"
-           style="stroke-width:0.352778"
-           x="24.999994"
-           y="18">4</tspan></text>
     </g>
     <g
        id="g5161"
@@ -1423,122 +1408,11 @@
          style="stroke-width:0.352778"
          x="118.99998"
          y="157">clk</tspan></text>
-    <g
-       id="g10929"
-       transform="translate(60.999981,127.99998)">
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="M 26.999997,11 H 21"
-         id="path10911"
-         sodipodi:nodetypes="cc" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="m 27,10 h 6"
-         id="path10913"
-         sodipodi:nodetypes="cc" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="M 27,9 V 21"
-         id="path10915"
-         sodipodi:nodetypes="cc" />
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="26"
-         y="10"
-         id="text10919"><tspan
-           sodipodi:role="line"
-           id="tspan10917"
-           style="stroke-width:0.352778"
-           x="26"
-           y="10">3</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-decoration-color:#000000;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="29"
-         y="9"
-         id="text10923"><tspan
-           sodipodi:role="line"
-           id="tspan10921"
-           style="stroke-width:0.352778"
-           x="29"
-           y="9">3:0</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="M 26.999997,14 H 21"
-         id="path10933"
-         sodipodi:nodetypes="cc" />
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="26"
-         y="13"
-         id="text10937"><tspan
-           sodipodi:role="line"
-           id="tspan10935"
-           style="stroke-width:0.352778"
-           x="26"
-           y="13">2</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="M 26.999997,17 H 21"
-         id="path10939"
-         sodipodi:nodetypes="cc" />
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="26"
-         y="16"
-         id="text10943"><tspan
-           sodipodi:role="line"
-           id="tspan10941"
-           style="stroke-width:0.352778"
-           x="26"
-           y="16">1</tspan></text>
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-         d="M 26.999997,20 H 21"
-         id="path10945"
-         sodipodi:nodetypes="cc" />
-      <text
-         xml:space="preserve"
-         style="font-size:1.76389px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;paint-order:stroke markers fill;stop-color:#000000"
-         x="26"
-         y="19"
-         id="text10949"><tspan
-           sodipodi:role="line"
-           id="tspan10947"
-           style="stroke-width:0.352778"
-           x="26"
-           y="19">0</tspan></text>
-    </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-       d="m 93.999976,137.99998 v -3 h 1.000002"
-       id="path10951" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke markers fill"
-       d="m 81.999976,138.99998 2e-6,12 h -6"
+       d="m 75.999978,150.99998 16.000023,2e-5 -2e-6,-16 h 3"
        id="path10953"
-       sodipodi:nodetypes="cc" />
-    <circle
-       id="path10955"
-       style="fill:#000000;stroke:none;stroke-width:0.264583"
-       cx="81.999969"
-       cy="142"
-       r="0.75" />
-    <circle
-       id="path10957"
-       style="fill:#000000;stroke:none;stroke-width:0.264583"
-       cx="81.999969"
-       cy="145"
-       r="0.75" />
-    <circle
-       id="path10959"
-       style="fill:#000000;stroke:none;stroke-width:0.264583"
-       cx="81.999969"
-       cy="147.99998"
-       r="0.75" />
+       sodipodi:nodetypes="cccc" />
     <text
        xml:space="preserve"
        style="font-size:3.52777px;line-height:1.55;font-family:'Lucida Sans';-inkscape-font-specification:'Lucida Sans, Normal';text-align:end;text-decoration-color:#000000;text-anchor:end;fill:#000000;stroke-width:0.352777;stroke-linejoin:bevel;-inkscape-stroke:none;paint-order:stroke markers fill;stop-color:#000000"
