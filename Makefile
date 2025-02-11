@@ -2,8 +2,6 @@ prefijo        ?= sim
 dir_fuentes    ?= src
 dir_resultados ?= resultados
 dir_trabajo    ?= build
-diagrama    ?= si
-adicional_prep ?= ;
 
 fuentes    := $(abspath $(dir_fuentes))
 resultados := $(abspath $(dir_resultados))
@@ -19,6 +17,14 @@ arch_fuente = $(wildcard $(fuentes)/*.vhd)
 arch_producidos = $(wildcard $(resultados)/*.*) $(wildcard $(trabajo)/*.*)
 
 .PHONY: all clean $(blancos)
+
+help:
+	@echo -e "Uso:\n"\
+	"    make <entidad> : ejecuta la simulación definida en sim_<entidad>.vhd\n"\
+	"    make clean : borra todos los archivos generados\n"\
+	"    make diagrama..<entidad> : genera un diagrama para la entidad <entidad> [requiere netlistsvg]\n"\
+	"    make sintesis..<entidad> : realiza la síntesis lógica para FPGA hx4k de la entidad <entidad>. Requiere el archivo de especificación de pines <entidad>.pcf\n"\
+	"    make carga..<entidad> : carga en la FPGA hx4k el bitmap generado por make sintesis..<entidad>.\n\n"
 
 all : $(blancos)
 
@@ -42,13 +48,27 @@ define plantilla =
 $(1): $(arch_cf)
 	cd $(trabajo) && ghdl -m $(ops) $(2)
 	cd $(trabajo) && ghdl -r $(ops) $(2) --wave=$(resultados)/$(1).ghw
-ifeq ($(diagrama),si)
+
 ifneq ($(netlistsvg),)
+diagrama..$(1): $(arch_cf)
+	cd $(trabajo) && ghdl -a $(ops) $(1)
 	cd $(trabajo) && ghdl --synth $(ops) --out=verilog $(1) > $(1).v
-	cd $(trabajo) && yosys -q -p "prep -top $(1) $(adicional_prep) write_json -compat-int $(1).json" $(1).v
+	cd $(trabajo) && yosys -q -p "prep -top $(1) ; write_json -compat-int $(1).json" $(1).v
 	cd $(trabajo) && $(netlistsvg) $(1).json -o $(resultados)/$(1).svg
+else
+diagrama..$(1):
+	@echo Falta netlistsvg, no es posible generar diagrama
 endif
-endif
+
+sintesis..$(1): $(arch_cf) $(dir_fuentes)/$(1).pcf
+	cd $(trabajo) && ghdl -m $(ops) $(1)
+	cd $(trabajo) && ghdl --synth $(ops) --out=verilog $(1) > $(1).v
+	cd $(trabajo) && yosys -q -p "read_verilog $(1).v ; synth_ice40 -json sintesis_$(1).json -top $(1)" -l sintesis_$(1).json.log
+	cd $(trabajo) && nextpnr-ice40 --hx4k --json sintesis_$(1).json --pcf ../$(dir_fuentes)/$(1).pcf --package tq144 --asc $(1).asc --log $(1).pnr_log
+	cd $(trabajo) && icepack $(1).asc ../$(dir_resultados)/$(1).bin
+
+carga..$(1): $(dir_resultados)/$(1).bin
+	cd $(resultados) && iceprog $(1).bin
 endef
 
 $(foreach blanco,$(blancos),$(eval $(call plantilla,$(blanco),$(prefijo)_$(blanco))))
